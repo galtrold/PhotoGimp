@@ -1,0 +1,14 @@
+<button (click)="getPhotos()">Hent billeder</button>
+<button (click)="updateLibrary()">Opdatere bibliotek</button>
+<div>Billeder</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <div *ngFor="let photo of photos" class=" photo-card __shadow" (click)="select(photo)">
+                <!-- Image card -->
+                <div [ngStyle]="{'background-image': 'url('+photo.ThumbFile+')'}"></div>
+            </div>
+        </div>
+    </div>
+</div>
